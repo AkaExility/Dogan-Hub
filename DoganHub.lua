@@ -1,11 +1,7 @@
+if game.PlaceId == 7449423635 or game.PlaceId == 2753915549 or game.PlaceId == 4442272183 then
+
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
 
-if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Death") then
-	game:GetService("ReplicatedStorage").Effect.Container.Death:Destroy()
-end
-if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn") then
-	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
-end
 _G.Settings = {
 
 	Main = {
@@ -314,7 +310,7 @@ function LoadSettings()
 			end
 		end
 	else
-		return warn("Status : Undetected Executor")
+		return warn("Status: Undetected Executor")
 	end
 end
 
@@ -331,7 +327,7 @@ function SaveSettings()
 			writefile("Dogan Hub Premium Scripts/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", game:GetService("HttpService"):JSONEncode(Array))
 		end
 	else
-		return warn("Status : Undetected Executor")
+		return warn("Status: Undetected Executor")
 	end
 end
 
